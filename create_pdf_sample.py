@@ -1,6 +1,5 @@
 from ho import pisa
 
-
 def create_pdf(file_name, html):
     with open(file_name, 'wb') as doc:
         pdf = pisa.CreatePDF(html, doc)
