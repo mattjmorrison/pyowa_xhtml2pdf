@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<style>
+@page {
+  margin: 1%;
+  margin-bottom: 15%;
+  @frame footer {
+    -pdf-frame-content: footerContent;
+    bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 5%;
+  }
+}
+</style>
+<body>
+  <ul>
+      {% for thing in large %}
+        <li>{{ thing }}</li>
+      {% endfor %}
+  </ul>
+  <div id="footerContent">
+    This is a footer on page #<pdf:pagenumber>
+  </div>
+</body>
+</html>

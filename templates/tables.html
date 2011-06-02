@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <table repeat=2>
+      <tr>
+          <th colspan=9>Headings!!!</th>
+      </tr>
+      <tr>
+          {% for other_thing in small %}
+            <th>{{ other_thing }}</th>
+          {% endfor %}
+      </tr>
+      {% for thing in large %}
+        <tr>
+            {% for other_thing in small %}
+            <td>{{ thing }} - {{ other_thing }}</td>
+            {% endfor %}
+        </tr>
+      {% endfor %}
+  </table>
+</body>
+</html>
